@@ -37,8 +37,8 @@ jobs:
 
     - name: Deploy to Minikube
       run: |
-        kubectl apply -f kubernetes/frontend-deployment.yaml
-        kubectl apply -f kubernetes/frontend-service.yaml
-        kubectl apply -f kubernetes/backend-deployment.yaml
-        kubectl apply -f kubernetes/backend-service.yaml
+        kubectl apply -f k8s/frontend-deployment.yaml
+        kubectl apply -f k8s/frontend-service.yaml
+        kubectl apply -f k8s/backend-deployment.yaml
+        kubectl apply -f k8s/backend-service.yaml
         
