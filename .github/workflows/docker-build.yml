@@ -13,10 +13,10 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Set up Docker to use Minikube's environment
+      shell: pwsh
       run: |
-        echo "Configuring Docker to use Minikube's daemon..."
+        Write-Output "Configuring Docker to use Minikube's daemon..."
         & minikube -p minikube docker-env | Invoke-Expression
-
 
     - name: Build Docker image for Frontend
       run: |
@@ -28,7 +28,6 @@ jobs:
 
     - name: Login to Docker Hub
       run: echo "Muhammadtaha1@@" | docker login -u "taha305" --password-stdin
-
 
     - name: Push Docker images to Docker Hub
       run: |
