@@ -27,7 +27,8 @@ jobs:
         docker build -t taha305/my-backend-app:latest ./server
 
     - name: Login to Docker Hub
-      run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+      run: echo "Muhammadtaha1@@" | docker login -u "taha305" --password-stdin
+
 
     - name: Push Docker images to Docker Hub
       run: |
