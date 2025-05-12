@@ -36,9 +36,5 @@ jobs:
         docker push taha305/my-backend-app:latest
 
     - name: Deploy to Minikube
-      run: |
-        kubectl apply -f k8s/frontend-deployment.yaml
-        kubectl apply -f k8s/frontend-service.yaml
-        kubectl apply -f k8s/backend-deployment.yaml
-        kubectl apply -f k8s/backend-service.yaml
+      run: kubectl apply -f k8s/
         
